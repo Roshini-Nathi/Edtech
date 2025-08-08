@@ -7,7 +7,7 @@ import google.generativeai as genai
 API_URL = "http://127.0.0.1:8000"  # Change this if hosted elsewhere
 
 # === Configure Gemini API ===
-genai.configure(api_key="api-key")
+genai.configure(api_key="your api-key")
 model = genai.GenerativeModel(model_name="gemini-2.0-flash")
 chat = model.start_chat(history=[])
 
@@ -107,4 +107,5 @@ elif menu == "Chatbot Tutor":
             st.write(response.text)
         except Exception as e:
             st.error(f"Chatbot error: {e}")
+
 
